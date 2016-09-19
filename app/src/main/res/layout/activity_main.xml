@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.rlam.cushmanshowcaseapp.MainActivity"
+    android:clickable="true"
+    android:contextClickable="false"
+    android:layoutMode="clipBounds">
+
+    <ImageButton
+        android:layout_width="241dp"
+        android:layout_height="171dp"
+        android:id="@+id/commercialButton"
+        android:background="@drawable/cushman_hauler"
+        android:cropToPadding="true"
+        android:contextClickable="false"
+        android:focusable="false"
+        android:layout_above="@+id/textView2"
+        android:layout_alignLeft="@+id/viewFlipper"
+        android:layout_alignStart="@+id/viewFlipper" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cushmanLogo"
+        android:background="@drawable/icon"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Commercial"
+        android:id="@+id/textView2"
+        android:textSize="20dp"
+        android:layout_marginLeft="56dp"
+        android:layout_marginStart="56dp"
+        android:layout_alignTop="@+id/textView3"
+        android:layout_alignLeft="@+id/commercialButton"
+        android:layout_alignStart="@+id/commercialButton" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Industrial"
+        android:id="@+id/textView3"
+        android:textSize="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/viewFlipper"
+        android:layout_alignEnd="@+id/viewFlipper"
+        android:layout_marginRight="49dp"
+        android:layout_marginEnd="49dp" />
+
+    <ImageButton
+        android:layout_width="241dp"
+        android:layout_height="171dp"
+        android:id="@+id/fawButton"
+        android:background="@drawable/cushman_factory"
+        android:layout_marginRight="36dp"
+        android:layout_marginEnd="36dp"
+        android:layout_alignTop="@+id/commercialButton"
+        android:layout_toLeftOf="@+id/button"
+        android:layout_toStartOf="@+id/button" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:text="Cushman.com"
+        android:id="@+id/browseCushman"
+        android:onClick="cushmanWeb"
+        android:nestedScrollingEnabled="false"
+        android:layout_alignTop="@+id/cushmanLogo"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:text="Request Information"
+        android:id="@+id/button"
+        android:textSize="14dp"
+        android:layout_below="@+id/button5"
+        android:layout_alignLeft="@+id/button2"
+        android:layout_alignStart="@+id/button2" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:text="Custom Gallery"
+        android:id="@+id/button2"
+        android:layout_below="@+id/browseCushman"
+        android:layout_alignLeft="@+id/browseCushman"
+        android:layout_alignStart="@+id/browseCushman" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:text="Parts and Accessories"
+        android:id="@+id/button3"
+        android:layout_below="@+id/button2"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:text="Deep Treads"
+        android:id="@+id/button4"
+        android:layout_below="@+id/button3"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:text="Customer Care"
+        android:id="@+id/button5"
+        android:layout_below="@+id/button4"
+        android:layout_alignRight="@+id/button"
+        android:layout_alignEnd="@+id/button" />
+
+    <ViewFlipper
+        android:layout_width="475dp"
+        android:layout_height="319dp"
+        android:id="@+id/viewFlipper"
+        android:touchscreenBlocksFocus="false"
+        android:animateFirstView="false"
+        android:forceHasOverlappingRendering="false"
+        android:flipInterval="3000"
+        android:autoStart="true"
+        android:layout_alignTop="@+id/cushmanLogo"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:layout_width="475dp"
+            android:layout_height="319dp"
+            android:id="@+id/imageView02"
+            android:background="@drawable/hauler_800_slideshow_2"
+            android:layout_above="@+id/commercialButton"
+            android:layout_toRightOf="@+id/commercialButton"
+            android:layout_toEndOf="@+id/commercialButton" />
+
+        <ImageView
+            android:layout_width="475dp"
+            android:layout_height="319dp"
+            android:id="@+id/imageView01"
+            android:background="@drawable/hauler_800_slideshow_1"
+            android:layout_alignTop="@+id/browseCushman"
+            android:layout_centerHorizontal="true" />
+
+    </ViewFlipper>
+
+
+</RelativeLayout>
